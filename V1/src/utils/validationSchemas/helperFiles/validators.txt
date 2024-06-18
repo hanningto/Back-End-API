@@ -1,0 +1,110 @@
+Here’s a list of some commonly used methods in the validator library along with their descriptions:
+
+.isEmail(str)
+
+Description: Checks if the string is a valid email address.
+Example: validator.isEmail('test@example.com')
+.isURL(str, options)
+
+Description: Checks if the string is a valid URL.
+Example: validator.isURL('https://www.example.com')
+Options: Can specify protocols, require protocol, host whitelist, etc.
+.isInt(str, options)
+
+Description: Checks if the string is an integer.
+Example: validator.isInt('123')
+Options: Can specify min, max, etc.
+.isFloat(str, options)
+
+Description: Checks if the string is a float.
+Example: validator.isFloat('123.45')
+Options: Can specify min, max, etc.
+.isAlpha(str, locale)
+
+Description: Checks if the string contains only letters (a-zA-Z).
+Example: validator.isAlpha('abc')
+Locale: Supports specific locales.
+.isAlphanumeric(str, locale)
+
+Description: Checks if the string contains only letters and numbers.
+Example: validator.isAlphanumeric('abc123')
+Locale: Supports specific locales.
+.isNumeric(str)
+
+Description: Checks if the string contains only numbers.
+Example: validator.isNumeric('123')
+.isBase64(str)
+
+Description: Checks if the string is a base64 encoded string.
+Example: validator.isBase64('aGVsbG8gd29ybGQ=')
+.isHexadecimal(str)
+
+Description: Checks if the string is a hexadecimal number.
+Example: validator.isHexadecimal('a1b2c3')
+.isBoolean(str)
+
+Description: Checks if the string is a boolean.
+Example: validator.isBoolean('true')
+.isDate(str, options)
+
+Description: Checks if the string is a valid date.
+Example: validator.isDate('2020-01-01')
+Options: Can specify formats.
+.isMobilePhone(str, locale)
+
+Description: Checks if the string is a valid mobile phone number.
+Example: validator.isMobilePhone('1234567890', 'en-US')
+.isCreditCard(str)
+
+Description: Checks if the string is a valid credit card number.
+Example: validator.isCreditCard('4111111111111111')
+.isPostalCode(str, locale)
+
+Description: Checks if the string is a valid postal code.
+Example: validator.isPostalCode('12345', 'US')
+.isUUID(str, version)
+
+Description: Checks if the string is a valid UUID.
+Example: validator.isUUID('123e4567-e89b-12d3-a456-426614174000')
+Version: Can specify UUID version.
+.isJSON(str)
+
+Description: Checks if the string is valid JSON.
+Example: validator.isJSON('{"key": "value"}')
+.isIP(str, version)
+
+Description: Checks if the string is a valid IP address.
+Example: validator.isIP('127.0.0.1')
+Version: Can specify IPv4 or IPv6.
+.isLowercase(str)
+
+Description: Checks if the string is lowercase.
+Example: validator.isLowercase('abc')
+.isUppercase(str)
+
+Description: Checks if the string is uppercase.
+Example: validator.isUppercase('ABC')
+.isAscii(str)
+
+Description: Checks if the string contains ASCII characters only.
+Example: validator.isAscii('abc123')
+.isFullWidth(str)
+
+Description: Checks if the string contains any full-width chars.
+Example: validator.isFullWidth('ひらがなカタカナ漢字')
+.isHalfWidth(str)
+
+Description: Checks if the string contains any half-width chars.
+Example: validator.isHalfWidth('ﾊﾝｶｸｶﾀｶﾅ')
+.isLength(str, options)
+
+Description: Checks if the string's length falls in a range.
+Example: validator.isLength('abc', { min: 2, max: 4 })
+.contains(str, seed)
+
+Description: Checks if the string contains the seed.
+Example: validator.contains('hello world', 'world')
+.matches(str, pattern, modifiers)
+
+Description: Checks if the string matches the pattern (regex).
+Example: validator.matches('abc', /^[a-z]+$/)
